@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_date: 2022-11-16
+  processing_time: MyString
+  shipping_date: 2022-11-16
+  status: MyString
+  comments: MyString
+
+two:
+  order_date: 2022-11-16
+  processing_time: MyString
+  shipping_date: 2022-11-16
+  status: MyString
+  comments: MyString
