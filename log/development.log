@@ -21384,3 +21384,82 @@ Processing by Admin::ProductsController#index as HTML
 Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 2605)
 
 
+Started GET "/" for ::1 at 2022-11-30 23:21:03 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (6.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:23
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 118.8ms | Allocations: 9360)
+  Rendered layout layouts/application.html.erb (Duration: 130.2ms | Allocations: 10195)
+Completed 200 OK in 250ms (Views: 143.0ms | ActiveRecord: 8.0ms | Allocations: 16250)
+
+
+Started GET "/cart.json" for ::1 at 2022-11-30 23:21:04 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/cart.json"):
+  
+Started GET "/admin/products/1" for ::1 at 2022-11-30 23:21:10 +0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 436)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 836)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 3660)
+
+
+Started GET "/cart.json" for ::1 at 2022-11-30 23:21:10 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/cart.json"):
+  
+Started GET "/cart.json" for ::1 at 2022-11-30 23:21:14 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/cart.json"):
+  
+Started GET "/admin/products/new" for ::1 at 2022-11-30 23:21:16 +0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 25.6ms | Allocations: 4976)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 27.2ms | Allocations: 5227)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 5411)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 5821)
+
+
+Started GET "/cart.json" for ::1 at 2022-11-30 23:21:17 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/cart.json"):
+  
+Started GET "/admin/products/new" for ::1 at 2022-11-30 23:22:58 +0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 17.8ms | Allocations: 2945)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 3218)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 3598)
+Completed 200 OK in 44ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 4474)
+
+
+Started GET "/cart.json" for ::1 at 2022-11-30 23:22:59 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/cart.json"):
+  
+Started GET "/admin/products" for ::1 at 2022-11-30 23:23:01 +0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:27
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2095)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2454)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 2.2ms | Allocations: 2812)
+
+
+Started GET "/cart.json" for ::1 at 2022-11-30 23:23:01 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/cart.json"):
+  
