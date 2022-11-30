@@ -19014,3 +19014,2373 @@ Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 1565)
 
 
   [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started GET "/admin/products" for ::1 at 2022-11-29 09:11:48 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1130)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 1487)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.7ms | Allocations: 1759)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-29 09:11:53 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 940)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 1306)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 1580)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-29 09:11:55 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 9400)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 9835)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.8ms | Allocations: 11032)
+
+
+Started GET "/admin/categories" for ::1 at 2022-11-29 09:11:58 -0500
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:15
+  Rendered admin/categories/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3936)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4371)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 0.8ms | Allocations: 6353)
+
+
+Started GET "/admin/categories/12/edit" for ::1 at 2022-11-29 09:12:06 -0500
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/admin/categories_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/categories/edit.html.erb within layouts/application
+  Rendered admin/categories/_form.html.erb (Duration: 2.2ms | Allocations: 1194)
+  Rendered admin/categories/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1423)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1600)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 3075)
+
+
+Started PATCH "/admin/categories/12" for ::1 at 2022-11-29 09:12:16 -0500
+Processing by Admin::CategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"some category"}, "commit"=>"Update Category", "id"=>"12"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/admin/categories_controller.rb:20:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/categories_controller.rb:21:in `update'
+  [1m[36mCategory Update (0.9ms)[0m  [1m[33mUPDATE "categories" SET "name" = ?, "updated_at" = ? WHERE "categories"."id" = ?[0m  [["name", "some category"], ["updated_at", "2022-11-29 14:12:16.372627"], ["id", 12]]
+  ↳ app/controllers/admin/categories_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/categories_controller.rb:21:in `update'
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 38ms (ActiveRecord: 14.5ms | Allocations: 3055)
+
+
+Started GET "/admin/categories" for ::1 at 2022-11-29 09:12:16 -0500
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:15
+  Rendered admin/categories/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2200)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2557)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 2832)
+
+
+Started GET "/admin/categories" for ::1 at 2022-11-30 01:18:36 -0500
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:15
+  Rendered admin/categories/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2366)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2711)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 2983)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:18:40 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1343)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 1620)
+
+
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "quantity", "barcode", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "new product"], ["description", "new desc"], ["quantity", 44.0], ["barcode", "ASD:234"], ["price", 23.0], ["created_at", "2022-11-30 06:24:43.859449"], ["updated_at", "2022-11-30 06:24:43.859449"], ["category_id", 3]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/admin/products" for ::1 at 2022-11-30 01:24:59 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1623)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1895)
+
+
+Started GET "/admin/products/3" for ::1 at 2022-11-30 01:25:03 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 430)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1207)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:25:11 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1477)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 1751)
+
+
+Started GET "/admin/products/3" for ::1 at 2022-11-30 01:25:14 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 436)
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1167)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:25:19 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1468)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 1742)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:26:04 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1613)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2224)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 3061)
+
+
+Started GET "/admin/products/3" for ::1 at 2022-11-30 01:26:09 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 655)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1488)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:26:13 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1456)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 1732)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 01:26:18 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 438)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1170)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:26:22 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 1486)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 1760)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 01:26:29 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 438)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1170)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:26:33 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 1459)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.4ms | Allocations: 1734)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:27:46 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1619)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2227)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3065)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 01:27:51 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 311)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 659)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1493)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:28:00 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1468)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 1744)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 01:28:02 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 468)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1200)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:28:05 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1465)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 1739)
+
+
+Started GET "/admin/products/3" for ::1 at 2022-11-30 01:28:08 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 433)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1164)
+
+
+Started GET "/admin/products/3/edit" for ::1 at 2022-11-30 01:28:10 -0500
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/edit.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 9.6ms | Allocations: 2459)
+  Rendered admin/products/edit.html.erb within layouts/application (Duration: 12.9ms | Allocations: 2688)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 2865)
+Completed 200 OK in 23ms (Views: 15.1ms | ActiveRecord: 1.2ms | Allocations: 3651)
+
+
+Started PATCH "/admin/products/3" for ::1 at 2022-11-30 01:28:16 -0500
+Processing by Admin::ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"new product", "description"=>"new desc", "quantity"=>"44.0", "barcode"=>"ASD:234", "price"=>"23.0", "category_name"=>"Gym Wear"}, "commit"=>"Update Product", "id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:29:in `update'
+  [1m[36mProduct Update (1.0ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ?, "category_name" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2022-11-30 06:28:16.946232"], ["category_name", "Gym Wear"], ["id", 3]]
+  ↳ app/controllers/admin/products_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:29:in `update'
+Redirected to http://localhost:3000/admin/products
+Completed 302 Found in 35ms (ActiveRecord: 14.4ms | Allocations: 2937)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:28:16 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1123)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1465)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 1739)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveCategoryNameFromProducts (20221130062910)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "quantity" decimal DEFAULT NULL, "barcode" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "category_name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","description","quantity","barcode","price","created_at","updated_at","category_id","category_name")
+                     SELECT "id","name","description","quantity","barcode","price","created_at","updated_at","category_id","category_name" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "quantity" decimal DEFAULT NULL, "barcode" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","name","description","quantity","barcode","price","created_at","updated_at","category_id")
+                     SELECT "id","name","description","quantity","barcode","price","created_at","updated_at","category_id" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130062910"]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCategoryNameToProducts (20221130063038)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "products" ADD "category_name" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130063038"]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "quantity", "barcode", "price", "created_at", "updated_at", "category_id", "category_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "somepro"], ["description", "some desc pro"], ["quantity", 12.0], ["barcode", "SKD:234"], ["price", 76.0], ["created_at", "2022-11-30 06:34:31.901679"], ["updated_at", "2022-11-30 06:34:31.901679"], ["category_id", 3], ["category_name", "Gym Wear"]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "product_categories" ON "categories"."id" = "product_categories"."category_id" WHERE "product_categories"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "product_categories" ON "products"."id" = "product_categories"."product_id" WHERE "product_categories"."category_id" = ?[0m  [["category_id", 3]]
+Started GET "/admin/products" for ::1 at 2022-11-30 01:36:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3739)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4177)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 6266)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 01:37:00 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 430)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1868)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:37:03 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1643)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 1918)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 01:37:07 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 435)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1167)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:37:16 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 1643)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 1917)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 01:37:19 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 453)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1185)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:38:17 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1631)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 1905)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 01:54:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1600)
+Completed 200 OK in 22ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 16197)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 01:55:02 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1845)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2246)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2676)
+
+
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/admin/categories" for ::1 at 2022-11-30 02:00:22 -0500
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:15
+  Rendered admin/categories/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3960)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4402)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 1.4ms | Allocations: 6398)
+
+
+Started GET "/admin/customers" for ::1 at 2022-11-30 02:00:24 -0500
+Processing by Admin::CustomersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/customers/index.html.erb within layouts/application
+  Rendered admin/customers/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 593)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1410)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 02:01:13 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 11608)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 12053)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.5ms | Allocations: 13268)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 02:01:59 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 461)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1241)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 02:02:01 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1646)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 1922)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 02:02:10 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 6404)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 6770)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.3ms | Allocations: 7046)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 02:02:14 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 433)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1175)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 02:02:19 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1643)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 1918)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 02:02:50 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 6875)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7486)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 8336)
+
+
+Started GET "/admin/orders/1" for ::1 at 2022-11-30 02:02:52 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::OrdersController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "product_categories" ON "products"."id" = "product_categories"."product_id" WHERE "product_categories"."category_id" = ?[0m  [["category_id", 3]]
+Started GET "/admin/orders" for ::1 at 2022-11-30 02:06:47 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 6872)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 7471)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.2ms | Allocations: 8329)
+
+
+Started GET "/admin/products/" for ::1 at 2022-11-30 02:06:50 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1793)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2229)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 2891)
+
+
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "product_categories" ON "categories"."id" = "product_categories"."category_id" WHERE "product_categories"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "product_categories" ON "categories"."id" = "product_categories"."category_id" WHERE "product_categories"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "product_categories" ON "categories"."id" = "product_categories"."category_id" WHERE "product_categories"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "product_categories" ON "products"."id" = "product_categories"."product_id" WHERE "product_categories"."category_id" = ?[0m  [["category_id", 2]]
+Started GET "/admin/products/1" for ::1 at 2022-11-30 02:13:16 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 660)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1715)
+
+
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/admin/orders" for ::1 at 2022-11-30 02:32:12 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 6561)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 6906)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 7183)
+
+
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "product_categories" ON "categories"."id" = "product_categories"."category_id" WHERE "product_categories"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gym Wear"], ["created_at", "2022-11-30 07:36:42.305124"], ["updated_at", "2022-11-30 07:36:42.305124"]]
+  [1m[36mProductCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at", "category_name", "product_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_id", 1], ["category_id", 14], ["created_at", "2022-11-30 07:36:42.315962"], ["updated_at", "2022-11-30 07:36:42.315962"], ["category_name", nil], ["product_name", nil]]
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/admin/products/" for ::1 at 2022-11-30 02:37:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 8662)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 9514)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 0.9ms | Allocations: 15291)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 02:37:12 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 811)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 3639)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 02:38:27 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 10346)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 10444)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms | Allocations: 11293)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `byebug' for #<ActionView::Base:0x0000000000ed80>
+
+'.freeze;			byebug
+         			^^^^^^):
+    22: 		<tr class="w3-hover-green">
+    23: 			<td> <%= product.name %> </td>
+    24: 			<td> <%= product.description %> </td>
+    25: 			<%byebug%>
+    26: 			<td> <%= product.quantity %> </td>
+    27: 			<td> <%= product.barcode %> </td>
+    28: 			<td> <%= product.price %> </td>
+  
+app/views/admin/products/index.html.erb:25
+app/views/admin/products/index.html.erb:21
+Started GET "/admin/products" for ::1 at 2022-11-30 02:39:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 12958)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 13068)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms | Allocations: 18779)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `byebug' for #<ActionView::Base:0x0000000000eb00>
+
+'.freeze;			byebug
+         			^^^^^^):
+    22: 		<tr class="w3-hover-green">
+    23: 			<td> <%= product.name %> </td>
+    24: 			<td> <%= product.description %> </td>
+    25: 			<%byebug%>
+    26: 			<td> <%= product.quantity %> </td>
+    27: 			<td> <%= product.barcode %> </td>
+    28: 			<td> <%= product.price %> </td>
+  
+app/views/admin/products/index.html.erb:25
+app/views/admin/products/index.html.erb:21
+Started GET "/admin/products" for ::1 at 2022-11-30 02:40:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 66358.9ms | Allocations: 61120)
+  Rendered layout layouts/application.html.erb (Duration: 66365.4ms | Allocations: 62859)
+Completed 200 OK in 66377ms (Views: 66367.5ms | ActiveRecord: 0.5ms | Allocations: 68704)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 02:42:03 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4329.6ms | Allocations: 19758)
+  Rendered layout layouts/application.html.erb (Duration: 4330.5ms | Allocations: 20266)
+Completed 200 OK in 4333ms (Views: 4331.6ms | ActiveRecord: 0.4ms | Allocations: 21018)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 02:42:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1596)
+Completed 200 OK in 23ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 16204)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-30 02:43:47 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 39244.9ms | Allocations: 50277)
+  Rendered layout layouts/application.html.erb (Duration: 39245.9ms | Allocations: 50853)
+Completed 200 OK in 39247ms (Views: 39246.5ms | ActiveRecord: 0.2ms | Allocations: 51636)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-30 02:44:26 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2190)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2691)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 3904)
+
+
+Started GET "/admin/products/4" for 127.0.0.1 at 2022-11-30 02:44:38 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 311)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 706)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 1666)
+
+
+Started GET "/admin/products/4/edit" for 127.0.0.1 at 2022-11-30 02:44:45 -0500
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/edit.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 12.5ms | Allocations: 9711)
+  Rendered admin/products/edit.html.erb within layouts/application (Duration: 13.2ms | Allocations: 9978)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 10162)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 10993)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2022-11-30 02:44:54 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 11814)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 12251)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.6ms | Allocations: 13545)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2022-11-30 02:44:55 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1303)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1626)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 1924)
+
+
+Started GET "/admin/products/1" for 127.0.0.1 at 2022-11-30 02:44:57 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 423)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1180)
+
+
+Started GET "/admin/products/1/edit" for 127.0.0.1 at 2022-11-30 02:45:00 -0500
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/edit.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 4.3ms | Allocations: 2069)
+  Rendered admin/products/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2134)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2311)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 3043)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2022-11-30 02:45:06 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1633)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 1908)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-30 02:48:33 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1551)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 1825)
+
+
+Started GET "/students" for ::1 at 2022-11-30 02:49:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+Started GET "/admin/orders" for ::1 at 2022-11-30 02:49:30 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 6505)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6924)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 7243)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 02:49:34 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1302)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1650)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 1925)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 02:49:36 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 433)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1192)
+
+
+Started GET "/admin/products/1/edit" for ::1 at 2022-11-30 02:49:48 -0500
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/edit.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.4ms | Allocations: 2079)
+  Rendered admin/products/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2140)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2317)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 3049)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 03:00:46 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1569)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1914)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 2186)
+
+
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started GET "/admin/products/4" for ::1 at 2022-11-30 04:58:38 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 462)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 1355)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 04:58:41 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1343)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1709)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 04:58:46 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.1ms | Allocations: 1922)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2093)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2270)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2638)
+
+
+Started POST "/admin/products" for ::1 at 2022-11-30 04:59:09 -0500
+Processing by Admin::ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"nmfdsamf", "description"=>"mxmcvmz", "quantity"=>"12", "barcode"=>"mdsa", "price"=>"23", "category_name"=>"cfds"}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:13:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "quantity", "barcode", "price", "created_at", "updated_at", "category_id", "category_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "nmfdsamf"], ["description", "mxmcvmz"], ["quantity", 12.0], ["barcode", "mdsa"], ["price", 23.0], ["created_at", "2022-11-30 09:59:09.534449"], ["updated_at", "2022-11-30 09:59:09.534449"], ["category_id", nil], ["category_name", "cfds"]]
+  ↳ app/controllers/admin/products_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:13:in `create'
+Redirected to http://localhost:3000/admin/products
+Completed 302 Found in 18ms (ActiveRecord: 12.2ms | Allocations: 4316)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 04:59:09 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1540)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1889)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2209)
+
+
+Started GET "/admin/products/5" for ::1 at 2022-11-30 04:59:14 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 447)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1189)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 05:02:39 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1826)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 2100)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:02:46 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 448)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1179)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:03:20 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1016)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 2341)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:03:22 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 460)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1267)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:03:22 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 439)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1170)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:03:23 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 451)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 1183)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:03:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1624)
+Completed 200 OK in 25ms (Views: 6.4ms | ActiveRecord: 0.5ms | Allocations: 16231)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:03:43 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 554)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1426)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 05:04:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 62465.1ms | Allocations: 46044)
+  Rendered layout layouts/application.html.erb (Duration: 62468.7ms | Allocations: 47128)
+Completed 200 OK in 62479ms (Views: 62470.2ms | ActiveRecord: 0.5ms | Allocations: 52983)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 05:05:39 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 414)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 830)
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 4265)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 06:07:37 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 12174.6ms | Allocations: 80530)
+  Rendered layout layouts/application.html.erb (Duration: 12175.3ms | Allocations: 80884)
+Completed 200 OK in 12176ms (Views: 12175.6ms | ActiveRecord: 0.1ms | Allocations: 81184)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 06:07:49 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 1938.7ms | Allocations: 12552)
+  Rendered layout layouts/application.html.erb (Duration: 1941.3ms | Allocations: 12910)
+Completed 200 OK in 1942ms (Views: 1941.5ms | ActiveRecord: 0.1ms | Allocations: 13192)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 06:08:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 8846)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 9704)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 15481)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 06:08:21 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 11618)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 12054)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.5ms | Allocations: 13272)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 06:08:22 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1492)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1829)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 2137)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 06:08:29 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 6.0ms | Allocations: 4575)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4843)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5027)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 5448)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 06:08:33 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1571)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1912)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 2239)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20221130111224)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_name" varchar, "address" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130111224"]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAndRemoveColumnsFromOrder (20221130111614)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130111614"]]
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/orders" for ::1 at 2022-11-30 07:05:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221130111929_add_and_remove_columns_from_order.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.4) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAndRemoveColumnsFromOrder (20221130111929)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130111929"]]
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/orders" for ::1 at 2022-11-30 07:06:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 9143)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 9566)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.9ms | Allocations: 11512)
+
+
+Started GET "/admin/products/" for ::1 at 2022-11-30 07:07:13 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4345)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4783)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 6634)
+
+
+Started GET "/admin/categories" for ::1 at 2022-11-30 07:07:20 -0500
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:15
+  Rendered admin/categories/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4079)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4514)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 1.2ms | Allocations: 6499)
+
+
+Started GET "/admin/products/" for ::1 at 2022-11-30 07:07:59 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1827)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 2125)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 07:08:09 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 6405)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 6750)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 7027)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:15:14 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2169)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2768)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 3615)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 07:15:16 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 402)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 808)
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 6969)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 07:15:32 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 408)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1016)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2331)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 07:15:33 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 439)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1246)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 07:15:33 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 445)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1176)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 07:15:34 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 448)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1179)
+
+
+Started GET "/admin/products/1" for ::1 at 2022-11-30 07:15:34 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 463)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1194)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:15:57 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1825)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2170)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 2500)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 07:16:00 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 444)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1176)
+
+
+Started GET "/admin/products/4/edit" for ::1 at 2022-11-30 07:16:02 -0500
+Processing by Admin::ProductsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/edit.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.0ms | Allocations: 2524)
+  Rendered admin/products/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2752)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2929)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3717)
+
+
+Started PATCH "/admin/products/4" for ::1 at 2022-11-30 07:16:06 -0500
+Processing by Admin::ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"somepro", "description"=>"some desc pro", "quantity"=>"12", "barcode"=>"SKD:234", "price"=>"76.0", "category_name"=>"Gym Wear"}, "commit"=>"Update Product", "id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:28:in `update'
+Redirected to http://localhost:3000/admin/products
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1921)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:16:06 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1543)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1916)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 2235)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 07:16:11 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 447)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1181)
+
+
+Started GET "/admin/products/4" for ::1 at 2022-11-30 07:20:13 -0500
+Processing by Admin::ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/show.html.erb within layouts/application
+  Rendered admin/products/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 409)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1026)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 2352)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:20:43 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2198)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 2550)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 07:20:47 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 6915)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 7339)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 7978)
+
+
+Started GET "/admin/products/" for ::1 at 2022-11-30 07:26:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 8848)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 9688)
+Completed 200 OK in 24ms (Views: 14.7ms | ActiveRecord: 0.5ms | Allocations: 15465)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 07:26:32 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 7.8ms | Allocations: 4595)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4885)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 5070)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 5556)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:26:34 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1573)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1911)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 2238)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 07:26:35 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 11615)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 12054)
+Completed 200 OK in 28ms (Views: 21.0ms | ActiveRecord: 0.8ms | Allocations: 13889)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 07:27:54 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 6410)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6755)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 7051)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:27:56 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1486)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1825)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2102)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:27:59 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1820)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2094)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:28:00 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1487)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1836)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 2120)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:28:03 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1829)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 2103)
+
+
+Started GET "/admin/orders" for ::1 at 2022-11-30 07:28:05 -0500
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 6404)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 6770)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.3ms | Allocations: 7045)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 07:37:17 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1685)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2039)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 2311)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSkuWeightCreateDateStockToProducts (20221130134305)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "products" ADD "sku" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "products" ADD "weight" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "products" ADD "create_date" datetime(6)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "barcode" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "category_name" varchar DEFAULT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","description","stock","barcode","price","created_at","updated_at","category_id","category_name","sku","weight","create_date")
+                     SELECT "id","name","description","quantity","barcode","price","created_at","updated_at","category_id","category_name","sku","weight","create_date" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "barcode" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "category_name" varchar DEFAULT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","name","description","stock","barcode","price","created_at","updated_at","category_id","category_name","sku","weight","create_date")
+                     SELECT "id","name","description","stock","barcode","price","created_at","updated_at","category_id","category_name","sku","weight","create_date" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130134305"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailPasswordFullnameBillingaddressShippingaddressCountryPhoneToCustomer (20221130140344)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "customers" ADD "password" varchar[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailPasswordFullnameBillingaddressShippingaddressCountryPhoneToCustomer (20221130140344)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "customers" ADD "password" varchar[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailPasswordFullnameBillingaddressShippingaddressCountryPhoneToCustomer (20221130140344)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "customers" ADD "password" varchar[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acustomers" ("id" integer NOT NULL PRIMARY KEY, "full_name" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "acustomers" ("id","full_name","address","email","created_at","updated_at","password")
+                     SELECT "id","customer_name","address","email","created_at","updated_at","password" FROM "customers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "customers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer NOT NULL PRIMARY KEY, "full_name" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "customers" ("id","full_name","address","email","created_at","updated_at","password")
+                     SELECT "id","full_name","address","email","created_at","updated_at","password" FROM "acustomers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acustomers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acustomers" ("id" integer NOT NULL PRIMARY KEY, "full_name" varchar DEFAULT NULL, "billing_address" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "acustomers" ("id","full_name","billing_address","email","created_at","updated_at","password")
+                     SELECT "id","full_name","address","email","created_at","updated_at","password" FROM "customers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "customers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer NOT NULL PRIMARY KEY, "full_name" varchar DEFAULT NULL, "billing_address" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "customers" ("id","full_name","billing_address","email","created_at","updated_at","password")
+                     SELECT "id","full_name","billing_address","email","created_at","updated_at","password" FROM "acustomers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acustomers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "customers" ADD "default_shipping_address" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "customers" ADD "country" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "customers" ADD "phone" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130140344"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCustomerIdOrderamoount (20221130141402)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "orders" ADD "customer_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "orders" ADD "order_amount" integer[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCustomerIdOrderamoount (20221130141402)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "orders" ADD "customer_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "orders" ADD "order_amount" integer[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCustomerIdOrderamoount (20221130141402)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "orders" ADD "customer_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "orders" ADD "order_amount" integer[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "processing_time" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "comments" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "payment_method" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","processing_time","status","comments","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount")
+                     SELECT "id","processing_time","status","comments","created_at","updated_at","customer_name","customer_address","payment_method","customer_id","order_amount" FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "processing_time" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "comments" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "payment_method" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","processing_time","status","comments","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount")
+                     SELECT "id","processing_time","status","comments","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "orders" ADD "order_email" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "orders" ADD "order_date" datetime(6)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "processing_time" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "comments" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "payment_method" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL, "order_email" varchar DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","processing_time","status","comments","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount","order_email","order_date")
+                     SELECT "id","processing_time","status","comments","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount","order_email","order_date" FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "processing_time" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "payment_method" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL, "order_email" varchar DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","processing_time","status","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount","order_email","order_date")
+                     SELECT "id","processing_time","status","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount","order_email","order_date" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "processing_time" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "payment_method" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL, "order_email" varchar DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","processing_time","status","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount","order_email","order_date")
+                     SELECT "id","processing_time","status","created_at","updated_at","customer_name","shipping_address","payment_method","customer_id","order_amount","order_email","order_date" FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "processing_time" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL, "order_email" varchar DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","processing_time","status","created_at","updated_at","customer_name","shipping_address","customer_id","order_amount","order_email","order_date")
+                     SELECT "id","processing_time","status","created_at","updated_at","customer_name","shipping_address","customer_id","order_amount","order_email","order_date" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "processing_time" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL, "order_email" varchar DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","processing_time","status","created_at","updated_at","customer_name","shipping_address","customer_id","order_amount","order_email","order_date")
+                     SELECT "id","processing_time","status","created_at","updated_at","customer_name","shipping_address","customer_id","order_amount","order_email","order_date" FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "customer_name" varchar DEFAULT NULL, "shipping_address" varchar DEFAULT NULL, "customer_id" integer DEFAULT NULL, "order_amount" integer DEFAULT NULL, "order_email" varchar DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","status","created_at","updated_at","customer_name","shipping_address","customer_id","order_amount","order_email","order_date")
+                     SELECT "id","status","created_at","updated_at","customer_name","shipping_address","customer_id","order_amount","order_email","order_date" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130141402"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOptions (20221130142217)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "options" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130142217"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProductsOptions (20221130142327)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products_options" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "option_id" integer, "product_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130142327"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveCategorynameProductnameFormProductcategory (20221130142541)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproduct_categories" ("id" integer NOT NULL PRIMARY KEY, "product_id" integer DEFAULT NULL, "category_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_name" varchar DEFAULT NULL, "product_name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproduct_categories" ("id","product_id","category_id","created_at","updated_at","category_name","product_name")
+                     SELECT "id","product_id","category_id","created_at","updated_at","category_name","product_name" FROM "product_categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "product_categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "product_categories" ("id" integer NOT NULL PRIMARY KEY, "product_id" integer DEFAULT NULL, "category_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "product_name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "product_categories" ("id","product_id","category_id","created_at","updated_at","product_name")
+                     SELECT "id","product_id","category_id","created_at","updated_at","product_name" FROM "aproduct_categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproduct_categories"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproduct_categories" ("id" integer NOT NULL PRIMARY KEY, "product_id" integer DEFAULT NULL, "category_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "product_name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproduct_categories" ("id","product_id","category_id","created_at","updated_at","product_name")
+                     SELECT "id","product_id","category_id","created_at","updated_at","product_name" FROM "product_categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "product_categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "product_categories" ("id" integer NOT NULL PRIMARY KEY, "product_id" integer DEFAULT NULL, "category_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "product_categories" ("id","product_id","category_id","created_at","updated_at")
+                     SELECT "id","product_id","category_id","created_at","updated_at" FROM "aproduct_categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproduct_categories"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130142541"]]
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/orders" for ::1 at 2022-11-30 09:30:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221130142911_create_order_details.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrderDetails (20221130142911)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "order_details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "product_id" integer, "price" integer, "sku" varchar, "quantity" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130142911"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/orders" for ::1 at 2022-11-30 09:30:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:19
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 15241)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 15351)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.5ms | Allocations: 20610)
+
+
+  
+ActionView::Template::Error (undefined method `customer_address' for #<Order id: 1, status: "testing status", created_at: "2022-11-23 11:38:09.160659000 +0000", updated_at: "2022-11-23 12:13:36.195648000 +0000", customer_name: "testing", shipping_address: "testing address", customer_id: nil, order_amount: nil, order_email: nil, order_date: nil>
+Did you mean?  customer_id):
+    19: 	<% @orders.each do |order| %>
+    20: 		<tr class="w3-hover-green">
+    21: 			<td> <%= order.customer_name %> </td>
+    22: 			<td> <%= order.customer_address %> </td>
+    23: 			<td> <%= order.payment_method %> </td>
+    24: 			<td> <%= order.processing_time %> </td>
+    25: 			<td> <%= order.comments %> </td>
+  
+app/views/admin/orders/index.html.erb:22
+app/views/admin/orders/index.html.erb:19
+Started GET "/admin/products/" for ::1 at 2022-11-30 09:30:54 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:21
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 14044)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 14130)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.4ms | Allocations: 16352)
+
+
+  
+ActionView::Template::Error (undefined method `quantity' for #<Product id: 1, name: "dfalklkdsa", description: "fadklsfkl", stock: 0.3214e4, barcode: "FKALKSF", price: 0.2134e4, created_at: "2022-11-29 11:35:41.426634000 +0000", updated_at: "2022-11-29 13:51:56.636895000 +0000", category_id: 4, category_name: nil, sku: nil, weight: nil, create_date: nil>):
+    22: 		<tr class="w3-hover-green">
+    23: 			<td> <%= product.name %> </td>
+    24: 			<td> <%= product.description %> </td>
+    25: 			<td> <%= product.quantity %> </td>
+    26: 			<td> <%= product.barcode %> </td>
+    27: 			<td> <%= product.price %> </td>
+    28: 			<td> <%= product.category_name %> </td>
+  
+app/views/admin/products/index.html.erb:25
+app/views/admin/products/index.html.erb:21
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveBarcodeFromProducts (20221130143153)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "barcode" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "category_name" varchar DEFAULT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","description","stock","barcode","price","created_at","updated_at","category_id","category_name","sku","weight","create_date")
+                     SELECT "id","name","description","stock","barcode","price","created_at","updated_at","category_id","category_name","sku","weight","create_date" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "category_name" varchar DEFAULT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","name","description","stock","price","created_at","updated_at","category_id","category_name","sku","weight","create_date")
+                     SELECT "id","name","description","stock","price","created_at","updated_at","category_id","category_name","sku","weight","create_date" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130143153"]]
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveCatidCatnameReplacewithCategoryInProducts (20221130143357)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "category_name" varchar DEFAULT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","description","stock","price","created_at","updated_at","category_id","category_name","sku","weight","create_date")
+                     SELECT "id","name","description","stock","price","created_at","updated_at","category_id","category_name","sku","weight","create_date" FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","name","description","stock","price","created_at","updated_at","category_id","sku","weight","create_date")
+                     SELECT "id","name","description","stock","price","created_at","updated_at","category_id","sku","weight","create_date" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "category_id" integer DEFAULT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","description","stock","price","created_at","updated_at","category_id","sku","weight","create_date")
+                     SELECT "id","name","description","stock","price","created_at","updated_at","category_id","sku","weight","create_date" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "stock" decimal DEFAULT NULL, "price" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "sku" varchar DEFAULT NULL, "weight" varchar DEFAULT NULL, "create_date" datetime(6) DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","name","description","stock","price","created_at","updated_at","sku","weight","create_date")
+                     SELECT "id","name","description","stock","price","created_at","updated_at","sku","weight","create_date" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "products" ADD "category" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221130143357"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/products/" for ::1 at 2022-11-30 09:47:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/southville/estore/app/controllers/admin/products_controller.rb:45: syntax error, unexpected ')', expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+...gory, :weight, :create_date, :)
+...                              ^
+):
+  
+app/controllers/admin/products_controller.rb:45: syntax error, unexpected ')', expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+app/controllers/admin/products_controller.rb:45: syntax error, unexpected ')', expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+app/controllers/admin/products_controller.rb:45: syntax error, unexpected ')', expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+Started GET "/admin/products/" for ::1 at 2022-11-30 09:47:23 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:23
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 6138)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6803)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.7ms | Allocations: 9215)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:47:35 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 17.2ms | Allocations: 10009)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 10255)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10438)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 10860)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:04 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.0ms | Allocations: 2954)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3222)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3603)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 4526)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:05 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.3ms | Allocations: 2333)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2394)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2571)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2880)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:05 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.6ms | Allocations: 2324)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2385)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2562)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2844)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:05 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.8ms | Allocations: 2315)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2376)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2553)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2835)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:05 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.3ms | Allocations: 2309)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2370)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2547)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2830)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:05 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.6ms | Allocations: 2321)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2382)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2559)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2841)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:34 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.5ms | Allocations: 2948)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3224)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3604)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4457)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:34 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.0ms | Allocations: 2327)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2388)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2565)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2874)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:35 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.3ms | Allocations: 2315)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2376)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2553)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2835)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:35 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.2ms | Allocations: 2330)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2391)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2568)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2850)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:35 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.3ms | Allocations: 2321)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2382)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2559)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2841)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:35 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.3ms | Allocations: 2324)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2385)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2562)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2844)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:36 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.1ms | Allocations: 2315)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2376)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2553)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2835)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:36 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.1ms | Allocations: 2312)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2373)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2550)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2832)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:47 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 5.1ms | Allocations: 2951)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3223)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3603)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4456)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:48 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 5.1ms | Allocations: 2321)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2382)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2559)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2869)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:48 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.2ms | Allocations: 2330)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2391)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2568)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2850)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:48 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.4ms | Allocations: 2303)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2364)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2541)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 2823)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:48:55 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.9ms | Allocations: 2945)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3223)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3603)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4456)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:50:09 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 3.4ms | Allocations: 2950)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3223)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3603)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4495)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:51:24 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.8ms | Allocations: 2962)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3235)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3615)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4496)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:51:25 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.8ms | Allocations: 2342)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2403)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2580)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2889)
+
+
+Started GET "/admin/products/new" for ::1 at 2022-11-30 09:51:45 -0500
+Processing by Admin::ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/new.html.erb within layouts/application
+  Rendered admin/products/_form.html.erb (Duration: 2.9ms | Allocations: 2933)
+  Rendered admin/products/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3207)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3587)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4440)
+
+
+Started GET "/admin/products" for ::1 at 2022-11-30 09:51:50 -0500
+Processing by Admin::ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admin/products/index.html.erb:23
+  Rendered admin/products/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1900)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2254)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 2605)
+
+

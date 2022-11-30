@@ -1,9 +1,13 @@
-<h1>Product Name</h1>
+
+<h1><%=@product.name%></h1>
 
 <p><strong>Name</strong><br><%=@product.name%></p>
 <p><strong>Description</strong><br><%=@product.description%></p>
-<p><strong>Quantity</strong><br><%@product.quantity%></p>
-<p><strong>Barcode</strong><br><%=@product.barcode%></p>
+<p><strong>Quantity</strong><br><%=@product.stock%></p>
+<p><strong>SKU</strong><br><%=@product.sku%></p>
 <p><strong>Price</strong><br><%=@product.price%></p>
+<p><strong>Weight</strong><br><%=@product.weight%></p>
+<p><strong>Date</strong><br><%=@product.create_date%></p>
+<p><strong>Category</strong><br><%=@product.category%></p>
 
 <%= link_to "Back", admin_products_path %> | <%= link_to 'Edit', edit_admin_product_url(@product) %>
