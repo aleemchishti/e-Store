@@ -1,13 +1,10 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<%= form_for [:admin, @category] do |form| %>
-
-<div>
-	<%= form.label :name%><br>
-	<%= form.text_field :name%>
-</div>
-<div>
-	<%= form.submit%>
-</div>
+<%= form_for [:admin, category] do |form| %>
+  <div class="mb-3">
+  	<%= form.label :name, class: "form-label"%><br>
+  	<%= form.text_field :name, class: "form-control"%>
+  <%= form.submit class: "btn btn-primary"%>
+  <%= link_to 'Back', admin_categories_path, class: "btn btn-secondary"%>
 <% end %>
-
-

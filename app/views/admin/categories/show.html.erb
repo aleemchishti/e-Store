@@ -1,0 +1,19 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="container-fluid">
+<h1><%=@category.name%></h1>
+
+<p><strong>Name</strong><br><%=@category.name%></p>
+
+	<div class="row">
+  		<div>
+		<%= link_to "Edit", edit_admin_category_path, class: 'btn btn-secondary'%>
+		</div>
+	</div>
+	<div class="row">
+  		<div>
+		<%= link_to "Back", admin_categories_path, class: 'btn btn-primary'%>
+		</div>
+	</div>
+</div>

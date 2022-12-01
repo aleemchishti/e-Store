@@ -1,10 +1,21 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <h1>Order Details</h1>
 
-<p><strong>Name</strong><br><%=@product.name%></p>
-<p><strong>Description</strong><br><%=@product.description%></p>
-<p><strong>Quantity</strong><br><%@product.quantity%></p>
-<p><strong>Barcode</strong><br><%=@product.barcode%></p>
-<p><strong>Price</strong><br><%=@product.price%></p>
-<p><strong>Category</strong><br><%=@product.category_name%></p>
+<p><strong>Customer ID</strong><br><%=@order.customer_id%></p>
+<p><strong>Customre Name</strong><br><%=@order.customer_name%></p>
+<p><strong>Sipping Address</strong><br><%=@order.shipping_address%></p>
+<p><strong>Order Amount</strong><br><%=@order.order_amount%></p>
+<p><strong>Order Email</strong><br><%=@order.order_email%></p>
+<p><strong>Order Date</strong><br><%=@order.order_date%></p>
+<p><strong>Status</strong><br><%=@order.status%></p>
 
-<%= link_to "Back", admin_products_path %> | <%= link_to 'Edit', edit_admin_product_url(@product) %>
+<div class="row">
+  	<div>
+	<%= link_to "Back", admin_orders_path, class: 'btn btn-primary'%>
+	</div>
+</div>
+ 
+
+

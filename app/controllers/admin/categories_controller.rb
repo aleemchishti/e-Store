@@ -10,9 +10,13 @@ class Admin::CategoriesController < ApplicationController
 		if @category.save 
 			redirect_to admin_categories_path
 		else
-			render :new
+			render :new, status: :unprocessable_entity
 		end 
 	end
+	def show
+		@category = Category.find(params[:id])
+	end 
+	
 	def edit
 		@category = Category.find(params[:id])
 	end
@@ -27,7 +31,7 @@ class Admin::CategoriesController < ApplicationController
 		def destroy
 		@category = Category.find(params[:id])
 		@category.destroy
-		redirect_to admin_categories_url , :notice => "Category has been deleted"
+		redirect_to admin_categories_path , :notice => "category has been deleted"
 	end 
 
 

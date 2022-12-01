@@ -2,21 +2,26 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <h1>Products Categories</h1>
-<%= link_to 'Create New', new_admin_category_path %>
+<div class="row">
+  	<div>
+	<%= link_to "New Category", new_admin_category_path, class: 'btn btn-primary'%>
+	</div>
+</div>
+ 
 	<table>
 		<thead>
 			<table class="w3-table-all">
-			<tr class="w3-light-grey w3-hover-red">
+			<tr class="w3-light-grey w3-hover-grey">
 				<th>Name</th>
 				<th colspan = '2'>Actions</th>
 			</tr>
 		</thead>
 	<tbody>
 		<% @categories.each do |category| %>
-		<tr class="w3-hover-green">
+		<tr class="w3-hover-grey">
 			<td> <%= category.name %> </td>
-			<td><%= link_to 'Edit', edit_admin_category_url(category)%></td>
-			<td><%= link_to "Delete", admin_category_url(category), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
+			<td><%= link_to 'Edit', admin_category_url(category), class: 'btn btn-secondary'%></td>
+			<td><%= link_to "Delete", admin_category_url(category), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },class: 'btn btn-danger' %></td>
 		</tr>
 		<% end %>
 	</tbody>

@@ -18,14 +18,14 @@
 #end 
 
 
-30.times do |c|
-	puts "creating order #{c+1}"
-	Order.create(
-		customer_name: "Customer#{c+1}",
-		customer_address: "address of Customer #{c+1}",
-		payment_method: "cash",
-		processing_time: " #{c+1} days",
-		status: "In Trasit",
-		comments: "Pending Order",
-	)
-end 
+#30.times do |c|
+#	puts "creating order #{c+1}"
+#	Order.create(
+#		customer_name: "Customer#{c+1}",
+#		customer_address: "address of Customer #{c+1}",
+#		payment_method: "cash",
+#		processing_time: " #{c+1} days",
+#		status: "In Trasit",
+#		comments: "Pending Order",
+#	)
+#end 
