@@ -12,7 +12,7 @@
   </div>
   <div class="mb-3">
   	<%= form.label :stock, class: "form-label"%><br>
-  	<%= form.text_field :stock, class: "form-control"%>
+  	<%= form.number_field :stock, class: "form-control"%>
   </div>
 
   <div class="mb-3">
@@ -21,15 +21,15 @@
   </div>
     <div class="mb-3">
   	<%= form.label :price, class: "form-label"%><br>
-  	<%= form.text_field :price, class: "form-control"%>
+  	<%= form.number_field :price, class: "form-control"%>
   </div>
     <div class="mb-3">
   	<%= form.label :weight, class: "form-label"%><br>
-  	<%= form.text_field :weight, class: "form-control"%>
+  	<%= form.number_field :weight, class: "form-control"%>
   </div>
     <div class="mb-3">
   	<%= form.label :create_date, class: "form-label"%><br>
-  	<%= form.text_field :create_date, class: "form-control"%>
+  	<%= form.date_field :create_date, class: "form-control"%>
   </div>
   <%= form.submit class: "btn btn-primary"%>
   <%= link_to 'Back', admin_products_path, class: "btn btn-secondary"%>

@@ -1,24 +1,41 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="container">
+  <div class="row align-items-start">
 
-<div class="container-fluid">
-<h1><%=@product.name%></h1>
+    <div class="col">
+    	<h3>Name:</h3>
+      	<%=@product.name%>
+    </div>
+    <div class="col">
+    	<h3>Description:</h3>
+     	<%=@product.description%>
+    </div>
+    <div class="col">
+    	<h3>Stock:</h3>
+     	<%=@product.stock%>
+    </div>
+    <div class="col">
+    	<h3>SKU:</h3>
+     	<%=@product.sku%>
+    </div>
+    <div class="col">
+    	<h3>Price:</h3>
+     	<%=@product.price%>
+    </div>
+    <div class="col">
+    	<h3>Weight:</h3>
+     	<%=@product.weight%>
+    </div>
+    <div class="col">
+    	<h3>Date:</h3>
+     	<%=@product.create_date%>
+    </div>
 
-<p><strong>Name</strong><br><%=@product.name%></p>
-<p><strong>Description</strong><br><%=@product.description%></p>
-<p><strong>Quantity</strong><br><%=@product.stock%></p>
-<p><strong>SKU</strong><br><%=@product.sku%></p>
-<p><strong>Price</strong><br><%=@product.price%></p>
-<p><strong>Weight</strong><br><%=@product.weight%></p>
-<p><strong>Date</strong><br><%=@product.create_date%></p>
-<p><strong>Category</strong><br><%=@product.category%></p>
-
-	<div class="row">
+    <div class="row align-items-start">
   		<div>
 		<%= link_to "Edit", edit_admin_product_path, class: 'btn btn-secondary'%>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row align-items-end">
   		<div>
 		<%= link_to "Back", admin_products_path, class: 'btn btn-primary'%>
 		</div>
