@@ -1,19 +1,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-<div class="container-fluid">
 <h1><%=@category.name%></h1>
+  <table>
+    <thead>
+      <table class="w3-table-all">
+      <tr class="w3-light-grey w3-hover-grey">
+        <th>Name</th>
+        <th>Details</th>
+        <th colspan = '2'>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <td> <%= @category.name%></td>
+        <td> <%= @category.details%></td>
+        <td><%= link_to 'Edit', edit_admin_category_url(@category), class: 'btn btn-warning'%></td>
+        <td><%= link_to 'Delete', admin_category_url(@category), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'btn btn-danger' %></td>
+    </tbody>
+  </table> 
 
-<p><strong>Name</strong><br><%=@category.name%></p>
-
-	<div class="row">
-  		<div>
-		<%= link_to "Edit", edit_admin_category_path, class: 'btn btn-secondary'%>
-		</div>
-	</div>
-	<div class="row">
-  		<div>
-		<%= link_to "Back", admin_categories_path, class: 'btn btn-primary'%>
-		</div>
-	</div>
+<div class="row">
+    <div>
+  <%= link_to "Back", admin_categories_path, class: 'btn btn-primary'%>
+  </div>
 </div>
+
+
