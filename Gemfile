@@ -26,6 +26,9 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem 'byebug'
 
+gem 'rspec-rails'
+gem 'factory_bot_rails'
+
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 

@@ -35,7 +35,7 @@ class Admin::CategoriesController < ApplicationController
 	end 
 
 
-			private 
+		private 
 
 		def category_params
 			params.require(:category).permit(:name, :details)
