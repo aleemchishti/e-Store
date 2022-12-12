@@ -24,7 +24,7 @@
 			<td> <%= category.name %> </td>
 			<td> <%= category.details %> </td>
 			<td><%= link_to 'View', admin_category_url(category), class: 'btn btn-light'%></td>
-			<td><%= link_to 'Edit', admin_category_url(category), class: 'btn btn-warning'%></td>
+			<td><%= link_to 'Edit', edit_admin_category_url(category), class: 'btn btn-warning'%></td>
 			<td><%= link_to "Delete", admin_category_url(category), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },class: 'btn btn-danger' %></td>
 
 		</tr>

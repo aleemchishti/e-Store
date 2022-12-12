@@ -9,4 +9,23 @@ class Product < ApplicationRecord
 
 	validates :description, :stock, :price, :weight, :create_date, :category, presence: true 
 	validates :name, :sku, presence: true, uniqueness: true
+
+
+	before_save :say_hello 
+	
+	after_initialize do |product|
+    puts "You have initialized an object!"
+  	end
+
+  	after_find do |product|
+    puts "You have found an object!"
+  	end
+
+
+
+  private
+  	def say_hello
+  		puts 'hello'
+  	end 
+
 end
